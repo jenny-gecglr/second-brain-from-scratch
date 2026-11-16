@@ -1,0 +1,5 @@
+# raw files must stay byte for byte identical: the vault doctor compares their size and content
+examples/filled-vault/raw/** -text
+vault-template/raw/** -text
+*.jpg binary
+*.png binary

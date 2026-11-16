@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+/vault-template/tools/raw_manifest.json
+/vault-template/outputs/vault-doctor/
