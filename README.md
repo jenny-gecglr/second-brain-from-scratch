@@ -42,23 +42,16 @@ It grew out of a real vault built over several weeks, and the guide keeps the mi
 ```mermaid
 %%{init: {"theme":"base","themeVariables":{"fontFamily":"Georgia, serif","primaryColor":"#1F3026","primaryTextColor":"#C7B3A3","primaryBorderColor":"#8F8E66","lineColor":"#8F8E66","tertiaryTextColor":"#C7B3A3","edgeLabelBackground":"#1F3026"}}}%%
 flowchart LR
-    A["Titles-only list<br/>of your sources"] --> C{"You decide"}
-    C -- SKIP --> S["Not imported"]
-    C -- LATER --> LT["Not now:<br/>decide again later"]
-    C -- TAKE --> D["Original saved<br/>in raw/"]
-    D --> E["Quality chain:<br/>cheap agent, other tool,<br/>strong model"]
-    E --> H{"You approve?"}
-    H -- no --> I["Nothing written"]
-    H -- yes --> J["Wiki pages,<br/>index, log"]
-    J --> K["Doctor script<br/>and backup"]
+    A["List<br/>titles only"] --> B{"You<br/>decide"}
+    B --> C["Quality<br/>chain"]
+    C --> D{"You<br/>approve"}
+    D --> E["Wiki +<br/>doctor"]
     classDef cBase fill:#1F3026,stroke:#8F8E66,color:#C7B3A3,stroke-width:1.5px
     classDef cAsk fill:#582377,stroke:#C7B3A3,color:#F2E8DD,stroke-width:1.5px
     classDef cDone fill:#8F8E66,stroke:#C7B3A3,color:#14201A,stroke-width:1.5px
-    classDef cStop fill:#16231B,stroke:#8F8E66,color:#B8A292,stroke-width:1.5px
-    class A,D,E,J cBase
-    class C,H cAsk
-    class K cDone
-    class S,I,LT cStop
+    class A,C cBase
+    class B,D cAsk
+    class E cDone
 ```
 
 | Step | What happens | Where it is explained |
