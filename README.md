@@ -41,7 +41,7 @@ It grew out of a real vault built over several weeks, and the guide keeps the mi
 
 ```mermaid
 %%{init: {"theme":"base","themeVariables":{"fontFamily":"Georgia, serif","primaryColor":"#1F3026","primaryTextColor":"#C7B3A3","primaryBorderColor":"#8F8E66","lineColor":"#8F8E66","tertiaryTextColor":"#C7B3A3","edgeLabelBackground":"#1F3026"}}}%%
-flowchart TD
+flowchart LR
     A["Your sources<br/>Claude, ChatGPT, Gemini,<br/>Drive, YouTube, NotebookLM"] --> B["Titles-only list<br/>(no content is read)"]
     B --> C{"You decide<br/>TAKE, SKIP or LATER"}
     C -- SKIP --> S["Not imported:<br/>stays in the export or in Drive"]
