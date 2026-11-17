@@ -140,12 +140,17 @@ Tested on Windows 11 with PowerShell 5.1 and Python 3.14:
 
 Known limit: newer ChatGPT exports may split chats into several `conversations-*.json` files; `list_export_titles.py` only reads `conversations.json`.
 
-Not tested, so treat as unverified:
-- Mac and Linux.
-- The menu names for Claude, ChatGPT and Google Takeout exports (they change).
-- The real file layout of each export.
-- The NotebookLM command-line steps (the tool changes; the author's own use is not independently verified).
-- Scheduling with `schtasks` (the command is standard; it was not registered during testing).
+Used by the author in a real working vault on Windows (November 2026), not re-run step by step for this kit:
+- importing the Claude, ChatGPT and Gemini (Google Takeout) histories and a Google Drive folder, with the menu steps described in the guide;
+- the NotebookLM command-line steps for YouTube transcripts and summaries;
+- a daily scheduled backup with `schtasks`;
+- the folder colors in the graph view.
+
+These are real, but the apps change their menus often, so check each step against what you see on screen.
+
+Not tried at all, so treat as unverified:
+- Mac and Linux (the vault files and Python scripts are system independent; the install commands and the backup scripts are Windows only).
+- The optional CSS snippets in the theme chapter.
 
 ## Added by this kit, not yet proven over time
 
