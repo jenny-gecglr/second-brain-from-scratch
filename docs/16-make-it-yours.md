@@ -16,6 +16,8 @@ Tips:
 - A theme only changes looks. If something breaks after a theme update, switch back with **Stop using this theme**.
 
 ## 2. Color the graph by folder
+![A real vault in the graph view with one color per folder](../assets/graph-example.png)
+
 The graph view shows your notes as dots and links as lines. Groups let you color the dots by folder, so each part of your brain has its own color.
 
 1. Open the **Graph view** (the graph icon on the left bar, or the command palette).

@@ -18,6 +18,12 @@ Most people who try a "second brain" end up with one of two things: a folder of 
 
 It grew out of a real vault built over several weeks, and the guide keeps the mistakes that happened along the way, so you can skip them.
 
+## What it looks like
+
+![The author's own vault in Obsidian's graph view, zoomed out, with folder colors](assets/graph-example.png)
+
+*The author's own vault in the graph view, zoomed far out (names hidden). Every color is one folder; chapter 16 shows how to set that up. Yours will be much smaller at first, and that is fine.*
+
 ## What you get
 
 | Piece | What it is |
