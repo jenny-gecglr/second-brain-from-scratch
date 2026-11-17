@@ -17,8 +17,8 @@ channel or video link
 ## Tools
 | Tool | Role | Install |
 |---|---|---|
-| `yt-dlp` (https://github.com/yt-dlp/yt-dlp) | lists a channel, gets titles, views, durations, descriptions | `pip install yt-dlp` then `python -m yt_dlp --version` |
-| NotebookLM | reads transcripts, produces summaries and verbatim transcripts | a Google account; the `nlm` command-line tool (project `notebooklm-mcp-cli`) can drive it from the agent. Install it as that project's own README describes (that install step was not re-tested for this kit), then sign in with `nlm login`; you sign in to Google yourself |
+| [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) | lists a channel, gets titles, views, durations, descriptions | `pip install yt-dlp` then `python -m yt_dlp --version` |
+| [NotebookLM](https://notebook.google.com) | reads transcripts, produces summaries and verbatim transcripts | a Google account; the `nlm` command-line tool ([`notebooklm-mcp-cli`](https://pypi.org/project/notebooklm-mcp-cli/), needs Python 3.11+) can drive it from the agent: `pip install notebooklm-mcp-cli`, then `nlm login` (you sign in to Google yourself). Its page says it uses undocumented Google interfaces, for personal use at your own risk. The install step was not re-tested for this kit |
 | a cheap model | sorting and filing only | whichever you have (a small Claude model, Gemini, etc.) |
 | a strong model | the final check and the list shown to you | your main agent |
 

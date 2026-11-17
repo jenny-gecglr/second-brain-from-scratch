@@ -3,7 +3,7 @@
 Gemini history does not come as a single "conversations" file. You get it through **Google Takeout**.
 
 ## 1. Request the export
-1. Go to https://takeout.google.com and sign in.
+1. Go to [takeout.google.com](https://takeout.google.com) and sign in.
 2. Click **Deselect all**.
 3. Select only what you need: the Gemini activity ("My Activity" with the Gemini Apps filter) and Gems if you created any. Do not export your whole Google account.
 4. Choose export once, zip, and create the export. You get an email when it is ready.

@@ -6,6 +6,8 @@ Drive usually holds a mix of useful documents and things that must never enter a
 The files stay in Drive. The vault gets (a) a **map** of what exists, and (b) notes written from the few documents you choose.
 
 ## Step 1. Connect Drive (optional)
+To have your Drive folders as a normal folder on the PC, install [Google Drive for desktop](https://workspace.google.com/products/drive/) (or use the Drive web page, [drive.google.com](https://drive.google.com)).
+
 You can read Drive from the agent in two ways:
 - **A Google Drive connector** for Claude (set up in Claude's connector settings; you sign in to Google yourself).
 - **Drive for desktop**, which shows Drive as a normal folder. Then the agent can read the files you point to, but also everything else in that folder, so point it at one folder only.

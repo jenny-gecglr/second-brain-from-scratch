@@ -3,7 +3,7 @@
 Same method as [04](04-claude-history.md). The differences are the export and one extra risk: shared accounts.
 
 ## 1. Request the export
-In ChatGPT: your profile, Settings, **Data controls**, **Export data**. You get an email with a download link that expires, so download the zip promptly. ([UNVERIFIED] menu names and link lifetime: OpenAI changes them; the help page was not reachable when this kit was written.)
+In [ChatGPT](https://chatgpt.com): your profile, Settings, **Data controls**, **Export data**. You get an email with a download link that expires, so download the zip promptly. ([UNVERIFIED] menu names and link lifetime: OpenAI changes them; the help page was not reachable when this kit was written.)
 
 ## 2. Store it untouched
 ```

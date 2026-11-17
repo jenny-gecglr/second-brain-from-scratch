@@ -103,12 +103,14 @@ python -I -X utf8 tools/vault_doctor.py
 | Item | Needed for | Notes |
 |---|---|---|
 | Windows 10 or 11 with PowerShell | everything | Mac and Linux: see "Tested and not tested" |
-| Obsidian | reading and editing the vault | install from the official site |
-| Python 3.8+ (only 3.14 was tested) | the doctor and the scripts | standard library only, except `yt-dlp` for YouTube |
-| Claude Code | the agent | needs a paid Claude plan or a Console account |
-| `yt-dlp` | YouTube listing (chapter 08) | `pip install yt-dlp` |
-| NotebookLM and its command-line tool | transcripts and summaries (chapters 08, 09) | optional; sign-in is yours |
-| A cloud-synced folder | backups that leave your PC | Google Drive for desktop, OneDrive or Dropbox |
+| [Obsidian](https://obsidian.md/download) | reading and editing the vault | free download from the official site |
+| [Python](https://www.python.org/downloads/) 3.8+ (only 3.14 was tested) | the doctor and the scripts | standard library only, except `yt-dlp` and the NotebookLM tool; that tool needs Python 3.11 or newer |
+| [Claude Code](https://code.claude.com/docs/en/setup) | the agent | needs a paid Claude plan or a Console account |
+| [Git for Windows](https://git-scm.com/downloads/win) | only if you want `git clone` or your own GitHub copy | optional; "Download ZIP" works without it |
+| [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) | YouTube listing (chapter 08) | `pip install yt-dlp` |
+| [NotebookLM](https://notebook.google.com) and its command-line tool [`notebooklm-mcp-cli`](https://pypi.org/project/notebooklm-mcp-cli/) | transcripts and summaries (chapters 08, 09) | optional; `pip install notebooklm-mcp-cli`, then `nlm login` (you sign in yourself). It uses undocumented Google interfaces: personal use, at your own risk |
+| [Google Takeout](https://takeout.google.com) | the Gemini history (chapter 06) | a Google account; nothing to install |
+| A cloud-synced folder | backups that leave your PC | [Google Drive for desktop](https://workspace.google.com/products/drive/), OneDrive or Dropbox |
 
 If a tool is missing, the guide tells you what to install and asks you to do the sign-in yourself.
 

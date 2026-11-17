@@ -1,6 +1,6 @@
 # 09. NotebookLM notebooks you already have
 
-If you used NotebookLM before this vault existed, you probably have notebooks full of sources. They are not in Google Takeout, so you bring them in by hand or through the agent.
+If you used [NotebookLM](https://notebook.google.com) before this vault existed, you probably have notebooks full of sources. They are not in Google Takeout, so you bring them in by hand or through the agent.
 
 ## Step 1. List the notebooks
 Ask the agent (with the NotebookLM tool connected, see [08](08-youtube-data.md)):
