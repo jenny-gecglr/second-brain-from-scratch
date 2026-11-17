@@ -1,8 +1,8 @@
 # Vault doctor report
 
-- Date: 2026-11-16 23:52
+- Date: 2026-11-17 15:08
 - Scanned: 27 notes (.md), 51 files
-- raw snapshot dated 2026-11-16T23:52:43
+- raw snapshot dated 2026-11-17T15:08:14
 
 ## Summary
 | Check | Level | Findings |

@@ -30,9 +30,9 @@ try {
     $tmp  = Join-Path $env:TEMP ("{0}_{1}.zip" -f $name, [guid]::NewGuid())
 
     # Build the archive in TEMP first, so a half-written zip never replaces a good one.
-    # -Force so files and folders with the Windows Hidden attribute are included too.
-    $items = Get-ChildItem -LiteralPath $Source -Force | ForEach-Object { $_.FullName }
-    Compress-Archive -LiteralPath $items -DestinationPath $tmp -Force
+    # .NET zip ignores file attributes, so hidden files (desktop.ini, .obsidian) are included too.
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+    [IO.Compression.ZipFile]::CreateFromDirectory($Source, $tmp, [IO.Compression.CompressionLevel]::Optimal, $false)
     Move-Item -LiteralPath $tmp -Destination $zip -Force
 
     Get-ChildItem -LiteralPath $Destination -Filter ("{0}_*.zip" -f $name) |

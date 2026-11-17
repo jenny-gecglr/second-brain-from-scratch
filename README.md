@@ -47,7 +47,7 @@ flowchart LR
     A["List<br/>titles only"] --> B{"You<br/>decide"}
     B --> C["Quality<br/>chain"]
     C --> D{"You<br/>approve"}
-    D --> E["Wiki +<br/>doctor"]
+    D --> E["Wiki, doctor,<br/>backup"]
     classDef cBase fill:#1F3026,stroke:#8F8E66,color:#C7B3A3,stroke-width:1.5px
     classDef cAsk fill:#582377,stroke:#C7B3A3,color:#F2E8DD,stroke-width:1.5px
     classDef cDone fill:#8F8E66,stroke:#C7B3A3,color:#14201A,stroke-width:1.5px
@@ -69,7 +69,7 @@ flowchart LR
 0. Get this repo onto your PC: on the repo page click the green **Code** button, then **Download ZIP**, then right-click the zip and **Extract All**. (If you know git, `git clone` works too.)
 1. Install Obsidian, Python and Claude Code (full steps with commands in [01. Setup from zero](docs/01-setup-from-zero.md)).
 2. Copy `vault-template/` to your own folder (and this repo's `scripts/` folder into it), and open that folder in Obsidian.
-3. In that folder run `claude` and paste the first-run message from the guide (it also takes the first snapshot of `raw/`).
+3. In that folder run `claude` and paste the first-run message ([docs/01, step 5](docs/01-setup-from-zero.md): open PowerShell in your vault folder, run `claude`, paste it; it also takes the first snapshot of `raw/`).
 4. Run the doctor and expect `ERROR 0 | WARNING 0 | INFO 0`:
 ```powershell
 python -I -X utf8 tools/vault_doctor.py
@@ -136,14 +136,15 @@ Tested on Windows 11 with PowerShell 5.1 and Python 3.14:
 - the doctor on a clean vault (0 findings) and on a vault with deliberately injected faults (broken link, empty file, deleted and changed raw file, future date, BOM, stray root file, missing privacy field, missing frontmatter, missing decision fields): all detected;
 - `backup-vault.ps1` and `test-restore.ps1` (backup, restore, doctor on the restored copy, error log on a missing source);
 - `list_export_titles.py` on synthetic Claude and ChatGPT export files (real exports not available to the kit author at test time);
-- Not handled: newer ChatGPT exports may split chats into several `conversations-*.json` files; `list_export_titles.py` only reads `conversations.json`.
 - `youtube_list.py` on a public channel (tested by the author on a public channel with network access; the offline parts were re-run independently): listing, the resume file not being overwritten, `--mark` with a valid and an invalid status, and the incomplete list.
+
+Known limit: newer ChatGPT exports may split chats into several `conversations-*.json` files; `list_export_titles.py` only reads `conversations.json`.
 
 Not tested, so treat as unverified:
 - Mac and Linux.
 - The menu names for Claude, ChatGPT and Google Takeout exports (they change).
 - The real file layout of each export.
-- The NotebookLM command-line steps (used successfully by the author in November 2026, but the tool changes).
+- The NotebookLM command-line steps (the tool changes; the author's own use is not independently verified).
 - Scheduling with `schtasks` (the command is standard; it was not registered during testing).
 
 ## Added by this kit, not yet proven over time
@@ -160,7 +161,7 @@ The core rules (approval gate, raw is never edited, producer is not checker, sco
 
 ## Credits
 
-- The raw / wiki / agent pattern comes from Andrej Karpathy's [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) (a public gist, April 2026). This kit contains none of its text, only the idea, explained in my own words. It is not written, reviewed or endorsed by Andrej Karpathy.
+- The raw / wiki / agent pattern and the ingest / lint / index / log workflow idea come from Andrej Karpathy's [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) (a public gist, April 2026). This kit contains none of its text, only the idea, explained in my own words. It is not written, reviewed or endorsed by Andrej Karpathy.
 - Install commands come from the official Claude Code setup page.
 - Written by the kit's author from a real working vault.
 - The banner art was made with Google Flow; the typography and layout belong to the author. The Obsidian logo on the notebook is the official purple lockup, used unaltered (only scaled) as published on Obsidian's brand page.

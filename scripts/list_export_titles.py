@@ -37,6 +37,11 @@ def main():
         out_path = sys.argv[sys.argv.index('--out') + 1]
         if out_path in args:
             args.remove(out_path)
+    try:
+        zipfile.ZipFile(args[0]).close()
+    except (OSError, zipfile.BadZipFile) as e:
+        print('Cannot open', args[0] + ':', e)
+        return 1
     with zipfile.ZipFile(args[0]) as z:
         names = [n for n in z.namelist() if n.lower().endswith('conversations.json')]
         if not names:

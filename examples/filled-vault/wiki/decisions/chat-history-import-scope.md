@@ -17,6 +17,6 @@ The export of 2026-03-02 and later exports.
 ## What does not change
 The original export zip stays untouched in `raw/exports/`. Skipped chats exist only there.
 
-Exception, decided by the owner on the same day: one travel chat is kept under `conversations/trip-planning-notes/` as a LATER item, marked `privacy: private`.
+Exception, decided by the owner on the same day: one travel chat is imported under `conversations/trip-planning-notes/` as an owner exception (TAKE), marked `privacy: private`.
 
 Titles were listed with `scripts/list_export_titles.py`, grouped, and decided one group at a time. See [[tools/drive-folder-map]] for the same method applied to Drive.

@@ -66,11 +66,15 @@ def sha(p):
     return h.hexdigest()
 
 
+# Resume/state files written by scripts/youtube_list.py (not evidence, they change on every --mark).
+STATE_FILES = ('_processed.json', 'videos.json', 'new_videos.txt', 'incomplete.txt')
+
+
 def raw_state():
     now = {}
     for r, ds, fs in os.walk(os.path.join(VAULT, 'raw')):
         for f in fs:
-            if f == '.gitkeep':
+            if f == '.gitkeep' or f in STATE_FILES:
                 continue
             p = os.path.join(r, f)
             try:

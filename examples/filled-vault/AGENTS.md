@@ -2,7 +2,7 @@
 
 > Read this file first in every session, then `wiki/INDEX.md`, then the last 20 lines of `wiki/log.md`. Do not open other files "just in case".
 > Works with any AI agent (Claude Code, Codex, Gemini CLI). Keep this file under 200 lines; move long detail into `wiki/rules/`.
-> Pattern: Andrej Karpathy's [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) idea (raw sources, compiled wiki, an agent that maintains it).
+> Pattern: Andrej Karpathy's [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) idea (raw sources, compiled wiki, an agent that maintains it, ingest / lint / index / log).
 
 ## 0. Who you work with
 - **Alex** (an invented example owner). Works in English. New to Obsidian and Claude Code, so explain terms in plain words and say exactly what to type and where.
@@ -57,7 +57,7 @@ After every operation: update `wiki/INDEX.md` and append one line to `wiki/log.m
 - **LINT** ("lint", weekly): run `python -I -X utf8 tools/vault_doctor.py`, read the report, tell the owner the top findings, fix only with approval.
 
 ## 6. Scope rule (what comes in)
-Before importing anything from outside (chat exports, Drive, YouTube): list the categories first, let the owner approve or reject each, record the decision in `wiki/decisions/`, and only then write. See `docs/03-scope-rule.md` in this kit.
+Before importing anything from outside (chat exports, Drive, YouTube): list the categories first, let the owner approve or reject each, record the decision in `wiki/decisions/`, and only then write. See `docs/03-scope-rule.md` in the kit repo (it is not copied into your vault).
 
 ## 7. Quality chain for agent work
 Cheap agents may analyse. Their output is **never** accepted unchecked:

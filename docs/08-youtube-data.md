@@ -18,11 +18,11 @@ channel or video link
 | Tool | Role | Install |
 |---|---|---|
 | `yt-dlp` (https://github.com/yt-dlp/yt-dlp) | lists a channel, gets titles, views, durations, descriptions | `pip install yt-dlp` then `python -m yt_dlp --version` |
-| NotebookLM | reads transcripts, produces summaries and verbatim transcripts | a Google account; the `nlm` command-line tool (project `notebooklm-mcp-cli`) can drive it from the agent. Install it as that project's own README describes (not tested here), then sign in with `nlm login`; you sign in to Google yourself |
+| NotebookLM | reads transcripts, produces summaries and verbatim transcripts | a Google account; the `nlm` command-line tool (project `notebooklm-mcp-cli`) can drive it from the agent. Install it as that project's own README describes (that install step was not re-tested for this kit), then sign in with `nlm login`; you sign in to Google yourself |
 | a cheap model | sorting and filing only | whichever you have (a small Claude model, Gemini, etc.) |
 | a strong model | the final check and the list shown to you | your main agent |
 
-Commands used in the tested setup (NotebookLM CLI 0.16.x, November 2026; they can change):
+Commands used by the author with NotebookLM CLI 0.16.x in November 2026 (not re-tested for this kit; they can change):
 ```text
 nlm notebook query <notebook> "<question>"        ask a question across the sources
 nlm source list <notebook> --json                 list sources and their ids
@@ -33,7 +33,7 @@ nlm source content <source-id> -o <file>          save the verbatim transcript t
 ```powershell
 python -I -X utf8 scripts/youtube_list.py "https://www.youtube.com/@ChannelName" raw/transcripts/ChannelName
 ```
-This writes `videos.json` (id, title, views, duration), an empty `_processed.json` (the resume file), `new_videos.txt` and `incomplete.txt`. The fast listing has **no upload dates and no descriptions**; Step 2 and Step 3b get them with a second pass.
+This writes `videos.json` (id, title, views, duration), an empty `_processed.json` (the resume file), `new_videos.txt` and `incomplete.txt`. These four files change every time you run the script, so the vault doctor ignores them when it checks `raw/`. The fast listing has **no upload dates and no descriptions**; Step 2 and Step 3b get them with a second pass.
 
 ## Step 2. Choose which videos
 | Channel size | Rule |

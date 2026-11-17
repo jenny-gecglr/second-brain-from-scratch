@@ -56,6 +56,9 @@ def listing(argv):
     args = [a for a in argv if not a.startswith('--')]
     tab = 'videos'
     if '--tab' in argv:
+        if argv.index('--tab') + 1 >= len(argv):
+            print('--tab needs a value: videos or shorts')
+            return 2
         tab = argv[argv.index('--tab') + 1]
         if tab in args:
             args.remove(tab)
