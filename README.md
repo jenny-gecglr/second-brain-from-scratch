@@ -20,9 +20,9 @@ It grew out of a real vault built over several weeks, and the guide keeps the mi
 
 ## What it looks like
 
-![The author's own vault in Obsidian's graph view, zoomed out, with folder colors](assets/graph-example.png)
+![A young vault in Obsidian's graph view, zoomed out, with one color per folder](assets/graph-example.png)
 
-*The author's own vault in the graph view, zoomed far out (names hidden). Every color is one folder; chapter 16 shows how to set that up. Yours will be much smaller at first, and that is fine.*
+*A beginner-level example: the author's own vault, still young, in the graph view zoomed far out (names hidden). Every color is one folder; chapter 16 shows how to set that up. Yours starts much smaller, and that is fine.*
 
 ## What you get
 
