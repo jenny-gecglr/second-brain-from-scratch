@@ -14,6 +14,8 @@
 
 Most people who try a "second brain" end up with one of two things: a folder of notes they never open, or a pile of AI chat logs they cannot search. This kit takes a different route. Your notes are plain markdown files in a vault. One constitution file (`AGENTS.md`) tells any AI agent how to maintain it. Everything that comes in, from chat exports, Drive or YouTube, passes a scope decision first and a quality check after, and nothing is written to the wiki until you say yes.
 
+**The idea behind it.** The pattern used here (raw sources you never edit, a wiki an AI agent writes and maintains, and a rules file that tells the agent how) comes from Andrej Karpathy's [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) idea file (April 2026). This kit is one practical, tested way to build it on Windows with Obsidian and Claude Code; it adds the import steps, the quality chain, the doctor and the backups.
+
 It grew out of a real vault built over several weeks, and the guide keeps the mistakes that happened along the way, so you can skip them.
 
 ## What you get
@@ -158,7 +160,7 @@ The core rules (approval gate, raw is never edited, producer is not checker, sco
 
 ## Credits
 
-- The raw / wiki / agent pattern follows Andrej Karpathy's "LLM Wiki" idea.
+- The raw / wiki / agent pattern comes from Andrej Karpathy's [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) (a public gist, April 2026). This kit contains none of its text, only the idea, explained in my own words. It is not written, reviewed or endorsed by Andrej Karpathy.
 - Install commands come from the official Claude Code setup page.
 - Written by the kit's author from a real working vault.
 - The banner art was made with Google Flow; the typography and layout belong to the author. The Obsidian logo on the notebook is the official purple lockup, used unaltered (only scaled) as published on Obsidian's brand page.

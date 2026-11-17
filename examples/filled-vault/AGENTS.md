@@ -2,7 +2,7 @@
 
 > Read this file first in every session, then `wiki/INDEX.md`, then the last 20 lines of `wiki/log.md`. Do not open other files "just in case".
 > Works with any AI agent (Claude Code, Codex, Gemini CLI). Keep this file under 200 lines; move long detail into `wiki/rules/`.
-> Pattern: Andrej Karpathy's "LLM Wiki" idea (raw sources, compiled wiki, an agent that maintains it).
+> Pattern: Andrej Karpathy's [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) idea (raw sources, compiled wiki, an agent that maintains it).
 
 ## 0. Who you work with
 - **Alex** (an invented example owner). Works in English. New to Obsidian and Claude Code, so explain terms in plain words and say exactly what to type and where.
