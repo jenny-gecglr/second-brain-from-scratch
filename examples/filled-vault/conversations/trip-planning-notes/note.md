@@ -6,4 +6,4 @@ privacy: private
 ---
 # Trip planning notes (invented example)
 
-A chat the owner decided to keep for later. It mentions travel dates and other people, so it carries `privacy: private`: it is read only when the owner opens it, and it is never handed to a sub-agent or an outside tool.
+A chat the owner chose to import as an exception. It mentions travel dates and other people, so it carries `privacy: private`: it is read only when the owner opens it, and it is never handed to a sub-agent or an outside tool.

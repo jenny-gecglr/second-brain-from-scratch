@@ -60,6 +60,9 @@ def listing(argv):
             print('--tab needs a value: videos or shorts')
             return 2
         tab = argv[argv.index('--tab') + 1]
+        if tab not in ('videos', 'shorts'):
+            print('--tab must be videos or shorts')
+            return 2
         if tab in args:
             args.remove(tab)
     if len(args) < 2:
