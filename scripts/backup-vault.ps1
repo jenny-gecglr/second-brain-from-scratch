@@ -30,7 +30,9 @@ try {
     $tmp  = Join-Path $env:TEMP ("{0}_{1}.zip" -f $name, [guid]::NewGuid())
 
     # Build the archive in TEMP first, so a half-written zip never replaces a good one.
-    Compress-Archive -Path (Join-Path $Source '*') -DestinationPath $tmp -Force
+    # -Force so files and folders with the Windows Hidden attribute are included too.
+    $items = Get-ChildItem -LiteralPath $Source -Force | ForEach-Object { $_.FullName }
+    Compress-Archive -LiteralPath $items -DestinationPath $tmp -Force
     Move-Item -LiteralPath $tmp -Destination $zip -Force
 
     Get-ChildItem -LiteralPath $Destination -Filter ("{0}_*.zip" -f $name) |

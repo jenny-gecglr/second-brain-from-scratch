@@ -26,7 +26,7 @@ Every import in this kit (chat exports, Drive, YouTube, notebooks) follows the s
 - Job-search drafts and one-off chats with no lasting value
 - Anything you would not want an outside tool or a sub-agent to read
 
-If a category is borderline, mark it `LATER` and decide when you know why you need it.
+If a category is borderline, mark it `LATER` and decide when you know why you need it. `LATER` means **not imported now**: the original stays in the export or in Drive, and you revisit it later with a new decision page.
 
 ## A decision page, filled in
 ```markdown

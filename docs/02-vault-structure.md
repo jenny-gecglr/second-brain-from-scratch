@@ -60,7 +60,7 @@ updated: 2026-01-31
 privacy: open       # optional: open | internal | private
 ---
 ```
-Templates for each type are in `templates/`.
+Templates exist in `templates/` for decision, lesson, source, rule and formula. Tool and synthesis pages use the same frontmatter (`type:`, `updated:`).
 
 ## Links
 Use `[[page-name]]`. Obsidian then shows backlinks and a graph. The doctor reports broken links and orphan pages so the graph stays connected.

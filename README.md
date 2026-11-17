@@ -45,7 +45,8 @@ flowchart TD
     A["Your sources<br/>Claude, ChatGPT, Gemini,<br/>Drive, YouTube, NotebookLM"] --> B["Titles-only list<br/>(no content is read)"]
     B --> C{"You decide<br/>TAKE, SKIP or LATER"}
     C -- SKIP --> S["Not imported:<br/>stays in the export or in Drive"]
-    C -- "TAKE or LATER" --> D["Original saved in raw/<br/>(never edited)"]
+    C -- LATER --> LT["Not imported now:<br/>the original stays in the export,<br/>decide again with a new decision page"]
+    C -- TAKE --> D["Original saved in raw/<br/>(never edited)"]
     D --> E["Cheap agent analyses"]
     E --> F["First check:<br/>a different tool or a script"]
     F --> G["Final check: a strong model<br/>writes a check report"]
@@ -61,7 +62,7 @@ flowchart TD
     class A,B,D,E,F,G,J,K cBase
     class C,H cAsk
     class L cDone
-    class S,I cStop
+    class S,I,LT cStop
 ```
 
 | Step | What happens | Where it is explained |
@@ -74,9 +75,10 @@ flowchart TD
 
 ## Quick start
 
+0. Get this repo onto your PC: on the repo page click the green **Code** button, then **Download ZIP**, then right-click the zip and **Extract All**. (If you know git, `git clone` works too.)
 1. Install Obsidian, Python and Claude Code (full steps with commands in [01. Setup from zero](docs/01-setup-from-zero.md)).
 2. Copy `vault-template/` to your own folder (and this repo's `scripts/` folder into it), and open that folder in Obsidian.
-3. In that folder run `claude` and paste the first-run message from the guide.
+3. In that folder run `claude` and paste the first-run message from the guide (it also takes the first snapshot of `raw/`).
 4. Run the doctor and expect `ERROR 0 | WARNING 0 | INFO 0`:
 ```powershell
 python -I -X utf8 tools/vault_doctor.py
@@ -111,7 +113,7 @@ python -I -X utf8 tools/vault_doctor.py
 |---|---|---|
 | Windows 10 or 11 with PowerShell | everything | Mac and Linux: see "Tested and not tested" |
 | Obsidian | reading and editing the vault | install from the official site |
-| Python 3.8+ (tested on 3.14) | the doctor and the scripts | standard library only, except `yt-dlp` for YouTube |
+| Python 3.8+ (only 3.14 was tested) | the doctor and the scripts | standard library only, except `yt-dlp` for YouTube |
 | Claude Code | the agent | needs a paid Claude plan or a Console account |
 | `yt-dlp` | YouTube listing (chapter 08) | `pip install yt-dlp` |
 | NotebookLM and its command-line tool | transcripts and summaries (chapters 08, 09) | optional; sign-in is yours |
@@ -143,7 +145,8 @@ Tested on Windows 11 with PowerShell 5.1 and Python 3.14:
 - the doctor on a clean vault (0 findings) and on a vault with deliberately injected faults (broken link, empty file, deleted and changed raw file, future date, BOM, stray root file, missing privacy field, missing frontmatter, missing decision fields): all detected;
 - `backup-vault.ps1` and `test-restore.ps1` (backup, restore, doctor on the restored copy, error log on a missing source);
 - `list_export_titles.py` on synthetic Claude and ChatGPT export files (real exports not available to the kit author at test time);
-- `youtube_list.py` on a public channel (tested by the author with network access; a second reviewer could only re-run the offline parts): listing, the resume file not being overwritten, `--mark` with a valid and an invalid status, and the incomplete list.
+- Not handled: newer ChatGPT exports may split chats into several `conversations-*.json` files; `list_export_titles.py` only reads `conversations.json`.
+- `youtube_list.py` on a public channel (tested by the author on a public channel with network access; the offline parts were re-run independently): listing, the resume file not being overwritten, `--mark` with a valid and an invalid status, and the incomplete list.
 
 Not tested, so treat as unverified:
 - Mac and Linux.
@@ -170,7 +173,7 @@ The core rules (approval gate, raw is never edited, producer is not checker, sco
 - Install commands come from the official Claude Code setup page.
 - Written by the kit's author from a real working vault.
 - The banner art was made with Google Flow; the typography and layout belong to the author. The Obsidian logo on the notebook is the official purple lockup, used unaltered (only scaled) as published on Obsidian's brand page.
-- Obsidian and Claude are trademarks of their respective owners. This kit is an independent, non-commercial project. It is not affiliated with, sponsored by or endorsed by Obsidian or Anthropic.
+- All product names (Obsidian, Claude, ChatGPT, Gemini, Google Drive, YouTube, NotebookLM and others) are trademarks of their respective owners. This kit is an independent, non-commercial project. It is not affiliated with, sponsored by or endorsed by Obsidian or Anthropic.
 
 ## License
 

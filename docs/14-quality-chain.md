@@ -5,14 +5,14 @@ Cheap models are fast and cost little, and they invent things, skip things and m
 ```mermaid
 %%{init: {"theme":"base","themeVariables":{"fontFamily":"Georgia, serif","primaryColor":"#1F3026","primaryTextColor":"#C7B3A3","primaryBorderColor":"#8F8E66","lineColor":"#8F8E66","tertiaryTextColor":"#C7B3A3","edgeLabelBackground":"#1F3026"}}}%%
 flowchart TD
-    A["1. Cheap agent<br/>analyses and produces"] --> B["2. First check<br/>a different tool or a script"]
+    A["Step 1: Cheap agent<br/>analyses and produces"] --> B["Step 2: First check<br/>a different tool or a script"]
     B -- "problems found" --> A
-    B -- "clean" --> C["3. Final check<br/>a strong model, short check report"]
+    B -- "clean" --> C["Step 3: Final check<br/>a strong model, short check report"]
     C -- "problems found" --> A
-    C -- "clean" --> D{"4. You approve?"}
+    C -- "clean" --> D{"Step 4: You approve?"}
     D -- no --> E["Nothing is written"]
-    D -- yes --> F["5. Pages written,<br/>index and log updated"]
-    F --> G["6. Vault doctor<br/>a script reads the whole vault"]
+    D -- yes --> F["Step 5: Pages written,<br/>index and log updated"]
+    F --> G["Step 6: Vault doctor<br/>a script reads the whole vault"]
     G -- "errors" --> H["Fix with your approval,<br/>run the doctor again"]
     H --> G
     G -- "0 errors" --> I["Done"]

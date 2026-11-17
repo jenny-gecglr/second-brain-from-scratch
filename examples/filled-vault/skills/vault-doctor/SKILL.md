@@ -12,7 +12,7 @@ description: Health check for this Obsidian vault (broken links, empty files, ch
 
 ## Steps
 1. Run from the vault root: `python -I -X utf8 tools/vault_doctor.py`
-2. Read the newest report in `outputs/vault-doctor/`. Start with the summary table.
+2. Read the report in `outputs/vault-doctor/`. Start with the summary table.
 3. Tell the owner in plain words: how many ERROR, WARNING, INFO and the top 3 findings.
 4. Propose fixes and wait for approval. The doctor fixes nothing.
 5. After fixing, run it again and show that the error count dropped.

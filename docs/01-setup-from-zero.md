@@ -27,7 +27,7 @@ python --version
 It must print `Python 3.x.x`. If Windows opens the Store instead, turn off the "App execution aliases" for Python in Settings, or reinstall with the PATH box ticked.
 
 ## Step 3. Install Claude Code
-The official install page is https://code.claude.com/docs/en/setup (commands below were checked against it; they can change, so look there if one fails).
+The official install page is https://code.claude.com/docs/en/setup (commands below were checked against it on 17 Nov 2026; they can change, so look there if one fails).
 
 In PowerShell:
 ```powershell
@@ -47,7 +47,8 @@ Sign in by running `claude` once and following the browser prompt. If you prefer
 Optional: install Git for Windows from https://git-scm.com/downloads/win.
 
 ## Step 4. Create your vault from the template
-1. Copy the folder `vault-template` from this repo to a place you choose, for example `C:\Users\YOU\Documents\MyVault`, and rename the copy to the name you like. Also copy this repo's `scripts` folder **into** that vault (so you have `MyVault\scripts\`). The commands in the guide are written to be run from the vault root and use `scripts\...` paths.
+0. Download this repo: on the repo page click the green **Code** button, then **Download ZIP**, then right-click the zip and **Extract All**.
+1. Copy the folder `vault-template` from the extracted repo to a place you choose, for example `C:\Users\YOU\Documents\MyVault`, and rename the copy to the name you like. Also copy this repo's `scripts` folder **into** that vault (so you have `MyVault\scripts\`). The commands in the guide are written to be run from the vault root and use `scripts\...` paths.
 2. Open Obsidian, choose **Open folder as vault**, and select that folder.
 3. You will see `AGENTS.md`, `CLAUDE.md`, `wiki/`, `raw/` and so on. If Obsidian asks about "Trust author and enable plugins", you can skip it: this vault needs no community plugins.
 
@@ -64,6 +65,7 @@ run the vault doctor with --snapshot and then without, show me the result, and a
 needed to fill section 0 (who I am, my language, what this vault is for).
 Do not write anything outside AGENTS.md section 0 until I approve.
 ```
+Claude Code asks your permission before it runs a command. For the doctor commands in this guide choose Yes, and read what it is about to run.
 3. Answer its questions. It should write section 0 of `AGENTS.md` and add one line to `wiki/log.md`.
 
 ## Step 6. Check that it works

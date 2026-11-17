@@ -17,8 +17,8 @@ channel or video link
 ## Tools
 | Tool | Role | Install |
 |---|---|---|
-| `yt-dlp` | lists a channel, gets titles, views, durations, descriptions | `pip install yt-dlp` then `python -m yt_dlp --version` |
-| NotebookLM | reads transcripts, produces summaries and verbatim transcripts | a Google account; the `nlm` command-line tool (project `notebooklm-mcp-cli`) can drive it from the agent. Follow that project's README; it asks you to sign in to Google yourself |
+| `yt-dlp` (https://github.com/yt-dlp/yt-dlp) | lists a channel, gets titles, views, durations, descriptions | `pip install yt-dlp` then `python -m yt_dlp --version` |
+| NotebookLM | reads transcripts, produces summaries and verbatim transcripts | a Google account; the `nlm` command-line tool (project `notebooklm-mcp-cli`) can drive it from the agent. Install it as that project's own README describes (not tested here), then sign in with `nlm login`; you sign in to Google yourself |
 | a cheap model | sorting and filing only | whichever you have (a small Claude model, Gemini, etc.) |
 | a strong model | the final check and the list shown to you | your main agent |
 
@@ -40,7 +40,7 @@ This writes `videos.json` (id, title, views, duration), an empty `_processed.jso
 |---|---|
 | 80 videos or fewer | take all |
 | more than 80 | the 80 most viewed of the last 6 months, plus the 50 most viewed of all time, without duplicates, at most 130 in total; a second model checks "did a clearly important video get missed?" |
-| Shorts | compare their median views with the long videos; **you** decide include or exclude per channel |
+| Shorts (list them separately with `--tab shorts` and their own out_dir, e.g. `python -I -X utf8 scripts/youtube_list.py "https://www.youtube.com/@ChannelName" raw/transcripts/ChannelName-shorts --tab shorts`) | compare their median views with the long videos; **you** decide include or exclude per channel |
 
 The "last 6 months" rule needs upload dates, which the fast listing does not have. Get them with a second pass for the candidates, one video at a time:
 ```powershell

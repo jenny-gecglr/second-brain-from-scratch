@@ -31,6 +31,9 @@ def main():
         return 2
     out_path = None
     if '--out' in sys.argv:
+        if sys.argv.index('--out') + 1 >= len(sys.argv):
+            print('--out needs a file path')
+            return 2
         out_path = sys.argv[sys.argv.index('--out') + 1]
         if out_path in args:
             args.remove(out_path)
