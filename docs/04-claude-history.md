@@ -3,7 +3,7 @@
 Your past Claude chats hold decisions, rules and prompts you already paid for. This step turns them into notes without importing the noise.
 
 ## 1. Request the export
-In [claude.ai](https://claude.ai): Settings, Privacy, **Export data**. You receive an email with a download link. Download the zip. (Menu names change from time to time: [UNVERIFIED] for your current version, so look for "Export data" under privacy or account settings.)
+In [claude.ai](https://claude.ai): Settings, Privacy, **Export data**. You receive an email with a download link. Download the zip. (The author used these steps. Menu names change from time to time: [UNVERIFIED] for your current version, so look for "Export data" under privacy or account settings.)
 
 ## 2. Store it untouched
 ```

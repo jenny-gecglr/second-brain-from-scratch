@@ -148,7 +148,7 @@ Do not publish your vault. If you build a public template from your own work:
 Tested on Windows 11 with PowerShell 5.1 and Python 3.14:
 - the doctor on a clean vault (0 findings) and on a vault with deliberately injected faults (broken link, empty file, deleted and changed raw file, future date, BOM, stray root file, missing privacy field, missing frontmatter, missing decision fields): all detected;
 - `backup-vault.ps1` and `test-restore.ps1` (backup, restore, doctor on the restored copy, error log on a missing source);
-- `list_export_titles.py` on synthetic Claude and ChatGPT export files (real exports not available to the kit author at test time);
+- `list_export_titles.py` on synthetic Claude and ChatGPT export files (this exact script was not run on real exports; the author's real imports followed the same steps);
 - `youtube_list.py` on a public channel (tested by the author on a public channel with network access; the offline parts were re-run independently): listing, the resume file not being overwritten, `--mark` with a valid and an invalid status, and the incomplete list.
 
 Known limit: newer ChatGPT exports may split chats into several `conversations-*.json` files; `list_export_titles.py` only reads `conversations.json`.
@@ -175,7 +175,7 @@ The core rules (approval gate, raw is never edited, producer is not checker, sco
 - the `--mark` option of the YouTube script and its `incomplete.txt`, `new_videos.txt` and `unavailable` status,
 - the English port of the vault doctor (it has more checks than the original and was only run on the template and the example vault, never on the author's own vault),
 - the `-KeepDays` and `-LogFile` options of the backup script, and the quoting advice for paths with spaces (the default run with `-KeepDays 30` was tested),
-- the theme and folder-color chapter and the optional-tools chapter.
+- the theme chapter (the folder colors in it were used by the author) and the optional-tools chapter.
 
 ## Credits
 

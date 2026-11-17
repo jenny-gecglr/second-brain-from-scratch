@@ -7,7 +7,7 @@ Gemini history does not come as a single "conversations" file. You get it throug
 2. Click **Deselect all**.
 3. Select only what you need: the Gemini activity ("My Activity" with the Gemini Apps filter) and Gems if you created any. Do not export your whole Google account.
 4. Choose export once, zip, and create the export. You get an email when it is ready.
-([UNVERIFIED] exact product names in Takeout: Google renames them. Pick the entries whose names contain "Gemini".)
+(The author used Takeout this way. [UNVERIFIED] exact product names in Takeout: Google renames them. Pick the entries whose names contain "Gemini".)
 
 ## 2. Store it outside the vault, then copy the part you need
 Keep the downloaded zip in a normal downloads folder, **not** inside the vault. Unzip it in a temporary folder outside the vault. Copy only the files you decided to keep into `raw/exports/gemini/<export-date>/`.
