@@ -24,6 +24,10 @@ It grew out of a real vault built over several weeks, and the guide keeps the mi
 
 *A beginner-level example: the author's own vault, still young, in the graph view zoomed far out (names hidden). Every color is one folder; chapter 16 shows how to set that up. Yours starts much smaller, and that is fine.*
 
+![The same graph close up: every dot is a note, every line is a link between notes](assets/graph-example-zoom.png)
+
+*Close up: every dot is a note and every line is a link. The big dots are hub pages that many notes point to.*
+
 ## What you get
 
 | Piece | What it is |
