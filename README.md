@@ -47,6 +47,7 @@ It grew out of a real vault built over several weeks, and the guide keeps the mi
 - **A doctor that reads raw as evidence.** `raw/` is never edited; a snapshot lets the doctor flag any raw file that was deleted or changed (by size for every file, by content hash for files up to 50 MB).
 - **Labels on every claim.** `[MEASURED]`, `[SOURCED]`, `[OWNER]`, `[UNVERIFIED]`: a reader can tell a computed number from a remembered one. The labels are a convention the agent follows; the doctor only counts `[UNVERIFIED]`.
 - **A restore test, not just a backup.** The kit ships the script that unzips the newest backup and runs the doctor on the copy.
+- **An archive you can use without the agent.** The vault is plain files in folders, with an index and a graph. When you need something, you can find it yourself in a few seconds (Obsidian's search, `wiki/INDEX.md`, the graph) instead of asking an AI and waiting for an answer that may be wrong.
 - **Honest limits.** The doctor checks structure, not truth; the guide says so, and says which parts were not tested.
 
 ## How it works

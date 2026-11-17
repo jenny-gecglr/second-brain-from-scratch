@@ -47,6 +47,14 @@ flowchart LR
 
 **Labels on claims.** `[MEASURED]`, `[SOURCED]`, `[OWNER]`, `[UNVERIFIED]` (see `AGENTS.md`). The point is that a reader can tell a computed number from a remembered one.
 
+## Find things yourself
+The vault is an archive first. You do not need the agent to look something up:
+- **Search:** Obsidian's search pane (by default `Ctrl+Shift+F`) finds any word in any note.
+- **Index:** `wiki/INDEX.md` lists every page by type; open it and scroll or press `Ctrl+F`.
+- **Graph and links:** open a page and follow its links, or open the graph view to see what sits next to it.
+- **Folders:** `raw/` has the original files, `wiki/` the written pages, `conversations/` your chats.
+Ask the agent when you want a summary or a comparison; look yourself when you only want to know where something is.
+
 ## Page naming
 - Meaningful names, no numbers, no dates in the file name (`engagement-rules.md`, not `01-rules-2026-03-04.md`). The date goes in the frontmatter. A graph node is named after the file, so numbered names become unreadable graphs.
 - The same name in two folders confuses links. The doctor reports it as INFO.
