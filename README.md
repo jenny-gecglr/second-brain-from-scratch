@@ -42,26 +42,22 @@ It grew out of a real vault built over several weeks, and the guide keeps the mi
 ```mermaid
 %%{init: {"theme":"base","themeVariables":{"fontFamily":"Georgia, serif","primaryColor":"#1F3026","primaryTextColor":"#C7B3A3","primaryBorderColor":"#8F8E66","lineColor":"#8F8E66","tertiaryTextColor":"#C7B3A3","edgeLabelBackground":"#1F3026"}}}%%
 flowchart LR
-    A["Your sources<br/>Claude, ChatGPT, Gemini,<br/>Drive, YouTube, NotebookLM"] --> B["Titles-only list<br/>(no content is read)"]
-    B --> C{"You decide<br/>TAKE, SKIP or LATER"}
-    C -- SKIP --> S["Not imported:<br/>stays in the export or in Drive"]
-    C -- LATER --> LT["Not imported now:<br/>the original stays in the export,<br/>decide again with a new decision page"]
-    C -- TAKE --> D["Original saved in raw/<br/>(never edited)"]
-    D --> E["Cheap agent analyses"]
-    E --> F["First check:<br/>a different tool or a script"]
-    F --> G["Final check: a strong model<br/>writes a check report"]
-    G --> H{"You approve?"}
-    H -- no --> I["Nothing is written to wiki/"]
-    H -- yes --> J["Pages written,<br/>index and log updated"]
-    J --> K["Vault doctor<br/>(a script, not an AI)"]
-    K --> L["Daily backup<br/>and a tested restore"]
+    A["Titles-only list<br/>of your sources"] --> C{"You decide"}
+    C -- SKIP --> S["Not imported"]
+    C -- LATER --> LT["Not now:<br/>decide again later"]
+    C -- TAKE --> D["Original saved<br/>in raw/"]
+    D --> E["Quality chain:<br/>cheap agent, other tool,<br/>strong model"]
+    E --> H{"You approve?"}
+    H -- no --> I["Nothing written"]
+    H -- yes --> J["Wiki pages,<br/>index, log"]
+    J --> K["Doctor script<br/>and backup"]
     classDef cBase fill:#1F3026,stroke:#8F8E66,color:#C7B3A3,stroke-width:1.5px
     classDef cAsk fill:#582377,stroke:#C7B3A3,color:#F2E8DD,stroke-width:1.5px
     classDef cDone fill:#8F8E66,stroke:#C7B3A3,color:#14201A,stroke-width:1.5px
     classDef cStop fill:#16231B,stroke:#8F8E66,color:#B8A292,stroke-width:1.5px
-    class A,B,D,E,F,G,J,K cBase
+    class A,D,E,J cBase
     class C,H cAsk
-    class L cDone
+    class K cDone
     class S,I,LT cStop
 ```
 
